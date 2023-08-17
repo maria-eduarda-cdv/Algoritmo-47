@@ -1,0 +1,86 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet"  type="text/css" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algoritmo 47/VS code</title>
+<link rel="shortcut icon" type="image/jpg" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWcAcfRHriKkvBczrKXYRhrUqZ64TzuuN_LmLUXSFaT6qAb0HkM4VmMQpmEV9JGPzeLoI&usqp=CAU"/>
+<body><div class="box1">
+ <button onclick="pagIndex()">Voltar</button>
+ 
+<h1>Algoritmo 47 - "IMC"</h1>
+
+
+<h3> Fazer um programa no qual o usuário digite a sua altura e o seu peso, final mostre o IMC (índice de massa corporal)<br> e uma mensagem se está abaixo do peso (IMC menor que 18) ou acima do peso (IMC maior ou igual a 18).
+IMC = peso / (altura * altura)</h3>
+
+
+<br>
+<p>Digite sua altura <input id="altura" type="number" min="1"></p>
+<p>Digite seu peso <input id="peso" type="number" min="1"></p>
+<button onclick="calcular()">Calcular</button>
+<h3 id="resultado">Aqui será o seu resultado</h3>
+<br>
+
+
+<img src="script.png"
+height="250"
+ width="700"><br><br>
+</div>
+
+</body>
+<style>
+    body{
+     background-image: url("https://img.elo7.com.br/product/600x380/35AF299/papel-de-parede-folhas-folhagem-delicado-fundo-verde-claro-papel-de-parede-adesivo.jpg");
+     text-align: center;
+     display: flex;
+ flex-direction: column;
+  justify-content: center;
+ align-items: center;
+ width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  color: rgb(0, 0, 0);}
+
+ button{
+    border-radius: 20px;
+    background-color: rgb(154, 236, 202);
+    color: rgb(0, 0, 0);
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 20px;
+ }
+.box1{
+    background-color:rgb(0, 124, 97);
+    padding: 15px;
+    border-radius: 2%;
+}
+</style>
+</html>
+
+
+
+
+
+
+
+
+<script>
+function calcular(){ var altura = Number(document.getElementById('altura').value);
+var peso = Number(document.getElementById('peso').value);
+var indice =  peso / (altura * altura)
+
+
+if(indice< 18){
+document.getElementById('resultado').innerHTML="está abaixo do peso"
+}
+if (indice>=18){
+document.getElementById('resultado').innerHTML = "está acima do peso"
+}
+ }
+ function pagIndex(){
+        window.location.href = "index.html"
+    }
+
+ </script>
